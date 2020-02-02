@@ -4,9 +4,9 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">        
-        <title>Rock Paper Scissors Game</title>
-        <link rel="stylesheet" href="rockGame.css">
-        <script src="./rockGame.js"></script>
+        <title>Pointing Game</title>
+        <link rel="stylesheet" href="pointingGame.css">
+        <script src="./pointingGame.js"></script>
         <noscript>Your browser does not support JavaScript! Sucks to be you!</noscript>
         <script src="https://kit.fontawesome.com/797785b0de.js" crossorigin="anonymous"></script>
 
@@ -14,91 +14,60 @@
     <body>
         <main>
         <!--Title and Introduction to the website-->
-        <div id= "title">Rock Paper Scissors Game</div>
+        <div id= "title">Pointing Game</div>
         <!--Question of what kind of dice to roll-->
         <!--text box to input their desired dice to roll-->
-        <p class= "smallText"><iframe width="240" height="160" src="https://www.youtube.com/embed/omY7G3fQ-Po" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<iframe width="240" height="160" src="https://www.youtube.com/embed/6Exh7gdx_qg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-           &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<iframe width="240" height="160" src="https://www.youtube.com/embed/QUdJoHqM_AM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </p>
-            <p id="bigText"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp We will Rock You!
-                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  Exploding Paper!
-                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Scissor Hands!  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                </p>
-          <div class = "textBox">
-            Rock, Paper, or Scissors? <input type="text" id="inputText" placeholder= "Choose Fool">
-                <br>
-                <br>
-                <!--game count clicks-->
-                <!--submit button that shoots off a bunch of functions etc.-->
-                <button onclick="mainThing()">Submit</button> 
-          </div> 
-          <!--divide the page from the input to the output-->
-          <hr>
+                <hr>
+                <div class="textBox">
+            <div class="dropdown">
+                <button onclick="myFunction()" id="dropbtn">Choose</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <button class="btn" onclick="choice1()">Point Up</button>
+                  <button class="btn" onclick="choice3()">Point Right</button>
+                  <button class="btn" onclick="choice2()">Point Down</button>
+                  <button class="btn" onclick="choice4()">Point Left</button>
+                </div>
+              </div>
+                </div>
         <div class="badge">
             <!--Eventually I'd like the user to be able to input how many dice they would like to roll-->
             <!--So this identifies which dice is which and will eventually need to be an id with a function-->
-            <h1><i class="fas fa-hand-rock fa-rotate-90" ></i>&nbsp&nbsp&nbsp&nbsp 
-                <i class="fas fa-toilet-paper"></i>&nbsp&nbsp&nbsp&nbsp
-                <i class="fas fa-hand-scissors"></i></h1>
+            <h1>
+                <i class="fas fa-arrow-up"></i>&nbsp&nbsp&nbsp&nbsp&nbsp
+                <i class="fas fa-arrow-down"></i>&nbsp&nbsp&nbsp&nbsp&nbsp
+                <i class="fas fa-arrow-right"></i>&nbsp&nbsp&nbsp&nbsp&nbsp
+                <i class="fas fa-arrow-left"></i>
+            </h1>
             <!--Several of the functions and output happen on "h2"-->
             <!--When I try to change the headers to go to 8 it freaks out so idk how to fix that-->
             <!--I could fix the css so that I use padding instead of empty lines-->
             <h2 id="printOpponentOutput"> &nbsp </h2>
             <h2 id="printUserOutput"> </h2>
             <!--h2 id="result"></h2>-->
-            <h3 id="clicksSpace">&nbsp</h3>
             <!--Icon improvement. -->
             <h4 id="printOutcome"> 
-                <i class="fas fa-dice"></i> </h4>
-               
-            <h5>&nbsp</h5>
-            <h5>&nbsp</h5>
+                &nbsp </h4>
+                <h4 id="printTurn"> 
+                It is Your Turn</h4>
+            <h5 id="h55">&nbsp</h5>
+            <h5 id="h555">&nbsp</h5>
             <!--Icons with question-->
             <h6 id="luckyLocation">
                 <i class="fas fa-question"></i>
                 <i class="fas fa-dice"></i> 
                 <!--win loss-->
-                Are you Feeling lucky?
+                &nbsp Are you Feeling lucky? &nbsp
                 <i class="fas fa-dice"></i>
                 <i class="fas fa-question"></i>
             </h6>
         </div>
-        
-        <!--<div class="badge"></div>
-        <h7 id= "tryAgain"></h7>
-        <p><a href="https://www.imdb.com/?ref_=nv_home">IMDb</p>-->
+            <div class="badge">
+            <p id=rules><h7>Rules of the game</h6><br>
+                On your turn you are trying to point in the direction your opponent points.
+                If you point in the same direction you win. If you are evaded, your opponent
+                gets to try to guess which direction you will point and you must evade him.
+            </p>
+        </div>
     </main>
-        <!--<i class="fas fa-dice"></i> -->
-        <!--<p id="dice1"></p>  trying to print dice1 - 6 based off the input in the text box
-        <p id="dice2"></p>
-        <p id="dice3"></p>
-        <p id="dice4"></p>
-        <p id="dice5"></p>
-        <p id="dice6"></p>
-        -->
     </body>
 </html>
-
-<!--Ideas to improve the website-->
-
-<!--More dice-->
-<!--Eventually I'd like the user to be able to input how many dice they would like to roll-->
-<!--So this identifies which dice is which and will eventually need to be an id with a function-->
-
-<!--I could fix the css so that I use padding instead of empty lines-->
-
-<!--Notice that when I start the page this icon is here. I'd like either-->
-<!--1. I'd like this to show just an icon from either 1-6 (7+ would just be the dice icon)-->
-<!--2. The number rolled surrounded by normal dice icons-->
-
-<!--The bottom part idk if I should do the dice icons with question marks especially when I fix the white space to have dice icons-->
-<!--Also I'd like to make the bottom part where it originally presents the question are you feeling lucky-->
-<!--Then half the time they get a response that they got lucky or better luck next time-->
-<!--Would I do this with a Boolean or a dice roll between 1-2, 1/true=lucky 2/false=unlucky with corresponding messages-->
-
-<!--text at the bottom of the page telling them if they'd like to roll a different sided dice to change their input or to reload the page-->
-
-<!--You rolled (a/an)? How to word this-->
-<!---->
-<!---->
